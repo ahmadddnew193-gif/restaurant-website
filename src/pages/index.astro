@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/main.astro';
+import RestaurantShowcase from '../components/RestaurantShowcase';
+---
+
+<MainLayout pageClass="restaurant">
+  <RestaurantShowcase client:only="react" />
+</MainLayout>
