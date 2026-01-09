@@ -1,48 +1,140 @@
-# Astro Starter Kit: Basics
+# La Bella Cucina - Modern Restaurant Website 🍽️
 
-```sh
-npm create astro@latest -- --template basics
+A beautiful, modern restaurant website built with Astro, React, and TailwindCSS featuring smooth animations, interactive menu, image gallery, and reservation system.
+
+## ✨ Features
+
+- **Hero Section** - Full-screen animated hero with parallax scrolling effect
+- **Interactive Menu** - Tabbed menu with categories (Starters, Main Courses, Desserts, Drinks)
+- **Image Gallery** - Stunning food photography with hover effects
+- **Reservation System** - Complete booking form with date picker
+- **Contact Section** - Google Maps integration and contact information
+- **Smooth Animations** - Fade-in, slide-up, and hover transitions throughout
+- **Responsive Design** - Mobile-first design that works on all devices
+- **Warm Color Palette** - Red, orange, and brown tones with elegant typography
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd restaurant-website
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. Install dependencies:
+```bash
+npm install
+```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+3. Run the development server:
+```bash
+npm run dev
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
 
-## 🚀 Project Structure
+## 📦 Build for Production
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+npm run build
+```
 
-```text
+The built files will be in the `dist/` directory.
+
+## 🌐 Deployment
+
+### Deploy to GitHub Pages
+
+1. Update `astro.config.mjs` with your site URL
+2. Build the project: `npm run build`
+3. Deploy the `dist/` folder to GitHub Pages
+
+### Deploy to Cloudflare Workers
+
+```bash
+npm run preview
+```
+
+Then follow Cloudflare's deployment instructions.
+
+### Deploy to Vercel/Netlify
+
+Simply connect your GitHub repository to Vercel or Netlify and they will automatically build and deploy your site.
+
+## 🛠️ Tech Stack
+
+- **Astro 5** - Static site generator
+- **React 19** - UI components
+- **TailwindCSS 4** - Styling
+- **shadcn/ui** - UI component library
+- **Lucide React** - Icons
+- **date-fns** - Date formatting
+
+## 📁 Project Structure
+
+```
 /
-├── public/
-│   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   ├── ui/              # shadcn/ui components
+│   │   └── RestaurantShowcase.tsx  # Main restaurant component
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   │   └── main.astro       # Main layout
+│   ├── pages/
+│   │   └── index.astro      # Home page
+│   └── styles/
+│       └── global.css       # Global styles & animations
+├── generated/
+│   ├── fonts.css            # Webflow fonts
+│   └── webflow.css          # Webflow design tokens
+└── public/                  # Static assets
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🎨 Customization
 
-## 🧞 Commands
+### Change Restaurant Name
+Edit the restaurant name in `src/components/RestaurantShowcase.tsx`:
+```tsx
+<h1>La Bella Cucina</h1>
+```
 
-All commands are run from the root of the project, from a terminal:
+### Update Menu Items
+Modify the `menuItems` object in `RestaurantShowcase.tsx`:
+```tsx
+const menuItems = {
+  starters: [...],
+  mains: [...],
+  // ... add your items
+}
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Change Colors
+The color scheme uses CSS variables from Webflow. You can override them in `src/styles/global.css` or modify `generated/webflow.css`.
 
-## 👀 Want to learn more?
+### Update Contact Information
+Edit the contact details in the Contact section of `RestaurantShowcase.tsx`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Change Google Maps Location
+Replace the Google Maps embed URL in the Contact section with your location.
+
+## 📝 License
+
+MIT License - feel free to use this project for your own restaurant!
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📧 Support
+
+For support, email info@labellacucina.com or open an issue on GitHub.
+
+---
+
+Made with ❤️ and ☕ using Astro and React
